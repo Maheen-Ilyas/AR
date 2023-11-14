@@ -22,10 +22,11 @@ class AnimatedButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             gradient: const LinearGradient(
               colors: [
-                Color.fromARGB(255, 255, 192, 203),
-                Color.fromARGB(255, 243, 103, 243),
-                Color.fromARGB(255, 150, 150, 238),
+                Color.fromARGB(255, 24, 40, 72),
+                Color.fromARGB(255, 75, 108, 183),
               ],
+              begin: Alignment.bottomCenter,
+              end: Alignment.topCenter,
             ),
           ),
           child: const Center(
