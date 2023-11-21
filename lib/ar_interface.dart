@@ -1,8 +1,9 @@
-import 'package:ar/ar_view_2.dart';
-import 'package:ar/utilities/model.dart';
+import 'package:ar/utilities/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer' as dev show log;
 import 'package:flutter_blurhash/flutter_blurhash.dart';
+import 'package:ar/ar_viewer.dart';
+import 'package:ar/utilities/model.dart';
 
 class ARInterface extends StatelessWidget {
   final List<ARModel> arModels;
@@ -14,29 +15,9 @@ class ARInterface extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        flexibleSpace: Container(
-          height: 150,
-          decoration: const BoxDecoration(
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(30),
-              bottomRight: Radius.circular(30),
-            ),
-            gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 32, 53, 96),
-                Color.fromARGB(255, 75, 108, 183),
-              ],
-              begin: Alignment.bottomCenter,
-              end: Alignment.topCenter,
-            ),
-          ),
-        ),
-        backgroundColor: Colors.transparent,
-        elevation: 15,
-        centerTitle: true,
-        title: const Text(
-          "Menu",
+      appBar: const CustomAppBar(
+        title: Text(
+          "AR",
           style: TextStyle(
             fontSize: 22,
             color: Colors.white,
