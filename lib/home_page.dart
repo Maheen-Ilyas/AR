@@ -1,5 +1,6 @@
-import 'package:ar/ar_view.dart';
+import 'package:ar/ar_interface.dart';
 import 'package:ar/profile_page.dart';
+import 'package:ar/utilities/model_and_story.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,7 +13,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = <Widget>[
-    const AR(),
+    ARInterface(
+      arModels: models,
+    ),
     const ProfilePage(),
   ];
 

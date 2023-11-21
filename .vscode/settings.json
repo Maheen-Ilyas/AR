@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
         "ARGB",
+        "blurhash",
         "crowdsourced",
         "datatypes",
         "dayr",
@@ -17,7 +18,9 @@
         "Propylaea",
         "Rapa",
         "rosherville",
+        "tobeadded",
         "torre",
+        "voba",
         "Walther"
     ],
     "java.configuration.updateBuildConfiguration": "interactive"
