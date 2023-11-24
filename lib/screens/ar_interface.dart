@@ -2,7 +2,7 @@ import 'package:ar/utilities/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer' as dev show log;
 import 'package:flutter_blurhash/flutter_blurhash.dart';
-import 'package:ar/ar_viewer.dart';
+import 'package:ar/screens/ar_viewer.dart';
 import 'package:ar/utilities/model.dart';
 
 class ARInterface extends StatelessWidget {

@@ -1,5 +1,5 @@
-import 'package:ar/ar_interface.dart';
-import 'package:ar/profile_page.dart';
+import 'package:ar/screens/ar_interface.dart';
+import 'package:ar/screens/profile_page.dart';
 import 'package:ar/utilities/model_and_story.dart';
 import 'package:flutter/material.dart';
 

@@ -1,4 +1,4 @@
-import 'package:ar/home_page.dart';
+import 'package:ar/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.lato().toString(),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const Carousel(),
     );
   }
 }

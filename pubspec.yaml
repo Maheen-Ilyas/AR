@@ -39,6 +39,9 @@ dependencies:
   google_fonts: ^6.1.0
   provider: ^6.1.1
   flutter_blurhash: ^0.8.2
+  vitality: ^2.0.0
+  introduction_screen: ^3.1.12
+  dots_indicator: ^2.1.2
   
 
 dev_dependencies:
