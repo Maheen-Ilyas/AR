@@ -1,4 +1,4 @@
-import 'package:ar/screens/splash_screen.dart';
+import 'package:ar/screens/carousel.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
