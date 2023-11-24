@@ -10,6 +10,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      title: title,
       flexibleSpace: Container(
         height: 150,
         decoration: const BoxDecoration(
@@ -27,12 +28,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
       ),
-      backgroundColor: Colors.transparent,
       elevation: 15,
       centerTitle: true,
     );
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(150);
+  Size get preferredSize => const Size.fromHeight(50);
 }

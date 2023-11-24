@@ -43,7 +43,10 @@ class ARInterface extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ARViewer(modelPath: model.modelPath),
+                    builder: (context) => ARViewer(
+                      modelPath: model.modelPath,
+                      name: model.name,
+                    ),
                   ),
                 );
               },

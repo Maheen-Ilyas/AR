@@ -4,9 +4,11 @@ import 'package:model_viewer_plus/model_viewer_plus.dart';
 
 class ARViewer extends StatefulWidget {
   final String modelPath;
+  final String name;
   const ARViewer({
     super.key,
     required this.modelPath,
+    required this.name,
   });
 
   @override
@@ -18,10 +20,10 @@ class _ARViewerState extends State<ARViewer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(
+      appBar: CustomAppBar(
         title: Text(
-          "AR",
-          style: TextStyle(
+          widget.name,
+          style: const TextStyle(
             fontSize: 22,
             color: Colors.white,
             fontWeight: FontWeight.w400,
