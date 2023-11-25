@@ -1,5 +1,6 @@
 import 'package:ar/screens/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
 class Carousel extends StatefulWidget {
@@ -12,16 +13,17 @@ class Carousel extends StatefulWidget {
 class _MyWidgetState extends State<Carousel> {
   final introKey = GlobalKey<IntroductionScreenState>();
   final pageDecoration = const PageDecoration(
+    bodyFlex: 2,
+    imageFlex: 3,
+    pageColor: Colors.white,
+    bodyPadding: EdgeInsets.all(8),
     titleTextStyle: TextStyle(
-      fontSize: 28,
-      fontWeight: FontWeight.w700,
+      fontSize: 26,
+      fontWeight: FontWeight.bold,
     ),
     bodyTextStyle: TextStyle(
-      fontSize: 19,
+      fontSize: 20,
     ),
-    bodyPadding: EdgeInsets.all(16),
-    pageColor: Colors.white,
-    imagePadding: EdgeInsets.zero,
   );
 
   void _onIntroEnd(context) {
@@ -36,31 +38,38 @@ class _MyWidgetState extends State<Carousel> {
       key: introKey,
       globalBackgroundColor: Colors.white,
       allowImplicitScrolling: true,
-      autoScrollDuration: 5000,
-      infiniteAutoScroll: true,
       bodyPadding: const EdgeInsets.all(16),
-      globalHeader: const Align(
-        alignment: Alignment.topRight,
+      globalHeader: Align(
+        alignment: Alignment.center,
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               top: 16,
               right: 16,
+            ),
+            child: Text(
+              "Get Started",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Theme.of(context).primaryColor,
+              ),
             ),
           ),
         ),
       ),
-      globalFooter: SizedBox(
+      globalFooter: Container(
         width: double.infinity,
         height: 60,
-        child: ElevatedButton(
+        color: Colors.white,
+        child: TextButton(
           onPressed: () {
             _onIntroEnd(context);
           },
-          child: const Text(
+          child: Text(
             "Wander Lens",
             style: TextStyle(
-              color: Color.fromARGB(255, 32, 53, 96),
+              color: Theme.of(context).primaryColor,
               fontSize: 24,
               fontWeight: FontWeight.bold,
             ),
@@ -69,15 +78,35 @@ class _MyWidgetState extends State<Carousel> {
       ),
       pages: [
         PageViewModel(
-          title: "Lifestyle & Travel",
+          title: "Travel",
+          image: SvgPicture.asset(
+            'assets/travelplans.svg',
+            height: 300,
+            width: 300,
+          ),
           body:
-              "Explore Monuments and Historical sites on your mobile phone from the comfort of your homes.",
+              "Explore monuments and historical sites right from your mobile phone, all within the comfort of your own home.",
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Explore AR",
+          image: SvgPicture.asset(
+            'assets/ar.svg',
+            height: 300,
+            width: 300,
+          ),
           body:
-              "Experience rich and informative view of the World's Most Famous Monuments, at not cost!",
+              "Experience the intricate views of the World's Most Famous Monuments, at not cost!",
+          decoration: pageDecoration,
+        ),
+        PageViewModel(
+          title: "Begin!",
+          image: SvgPicture.asset(
+            'assets/completed.svg',
+            height: 300,
+            width: 300,
+          ),
+          body: "What are you waiting for? Start today!",
           decoration: pageDecoration,
         ),
       ],
@@ -88,26 +117,27 @@ class _MyWidgetState extends State<Carousel> {
       showBackButton: true,
       back: const Icon(Icons.arrow_back),
       next: const Icon(Icons.arrow_forward),
-      done: const Text(
+      done: Text(
         'Done',
         style: TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.w600,
-          color: Color.fromARGB(255, 32, 53, 96),
+          color: Theme.of(context).primaryColor,
         ),
       ),
       curve: Curves.fastLinearToSlowEaseIn,
       controlsMargin: const EdgeInsets.all(16),
-      dotsDecorator: const DotsDecorator(
-        size: Size(10.0, 10.0),
-        color: Color(0xFFBDBDBD),
-        activeColor: Color.fromARGB(255, 32, 53, 96),
-        activeSize: Size(22.0, 10.0),
-        activeShape: RoundedRectangleBorder(
+      dotsDecorator: DotsDecorator(
+        size: const Size(10.0, 10.0),
+        color: const Color(0xFFBDBDBD),
+        activeColor: Theme.of(context).primaryColor,
+        activeSize: const Size(22.0, 10.0),
+        activeShape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(25.0)),
         ),
       ),
       dotsContainerDecorator: const ShapeDecoration(
+        color: Colors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(8.0)),
         ),

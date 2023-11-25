@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        primaryColor: const Color.fromARGB(255, 32, 53, 96),
         fontFamily: GoogleFonts.lato().toString(),
         useMaterial3: true,
       ),
