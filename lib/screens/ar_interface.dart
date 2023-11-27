@@ -4,6 +4,7 @@ import 'dart:developer' as dev show log;
 import 'package:flutter_blurhash/flutter_blurhash.dart';
 import 'package:ar/screens/ar_viewer.dart';
 import 'package:ar/utilities/model.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ARInterface extends StatelessWidget {
   final List<ARModel> arModels;
@@ -15,13 +16,14 @@ class ARInterface extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(
+      appBar: CustomAppBar(
         title: Text(
           "AR",
           style: TextStyle(
             fontSize: 22,
             color: Colors.white,
             fontWeight: FontWeight.w400,
+            fontFamily: GoogleFonts.lato().toString(),
           ),
         ),
       ),
@@ -70,10 +72,11 @@ class ARInterface extends StatelessWidget {
                     Text(
                       model.name,
                       textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        color: Color.fromARGB(255, 31, 29, 29),
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 31, 29, 29),
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
+                        fontFamily: GoogleFonts.lato().toString(),
                       ),
                     )
                   ],

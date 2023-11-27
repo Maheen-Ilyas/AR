@@ -1,6 +1,7 @@
-import 'package:ar/screens/home_page.dart';
+import 'package:ar/screens/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
 class Carousel extends StatefulWidget {
@@ -12,23 +13,27 @@ class Carousel extends StatefulWidget {
 
 class _MyWidgetState extends State<Carousel> {
   final introKey = GlobalKey<IntroductionScreenState>();
-  final pageDecoration = const PageDecoration(
+  final pageDecoration = PageDecoration(
     bodyFlex: 2,
     imageFlex: 3,
     pageColor: Colors.white,
-    bodyPadding: EdgeInsets.all(8),
+    bodyPadding: const EdgeInsets.all(8),
     titleTextStyle: TextStyle(
       fontSize: 26,
       fontWeight: FontWeight.bold,
+      fontFamily: GoogleFonts.lato().toString(),
     ),
     bodyTextStyle: TextStyle(
       fontSize: 20,
+      fontFamily: GoogleFonts.lato().toString(),
     ),
   );
 
   void _onIntroEnd(context) {
     Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (_) => const HomePage()),
+      MaterialPageRoute(
+        builder: (_) => const SignUp(),
+      ),
     );
   }
 
@@ -50,9 +55,10 @@ class _MyWidgetState extends State<Carousel> {
             child: Text(
               "Get Started",
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 28,
                 fontWeight: FontWeight.bold,
                 color: Theme.of(context).primaryColor,
+                fontFamily: GoogleFonts.lato().toString(),
               ),
             ),
           ),
@@ -72,6 +78,7 @@ class _MyWidgetState extends State<Carousel> {
               color: Theme.of(context).primaryColor,
               fontSize: 24,
               fontWeight: FontWeight.bold,
+              fontFamily: GoogleFonts.lato().toString(),
             ),
           ),
         ),

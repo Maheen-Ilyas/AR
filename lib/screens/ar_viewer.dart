@@ -1,5 +1,6 @@
 import 'package:ar/utilities/custom_app_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:model_viewer_plus/model_viewer_plus.dart';
 
 class ARViewer extends StatefulWidget {
@@ -23,10 +24,11 @@ class _ARViewerState extends State<ARViewer> {
       appBar: CustomAppBar(
         title: Text(
           widget.name,
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 22,
             color: Colors.white,
             fontWeight: FontWeight.w400,
+            fontFamily: GoogleFonts.lato().toString(),
           ),
         ),
       ),
@@ -35,6 +37,8 @@ class _ARViewerState extends State<ARViewer> {
         ar: true,
         disableZoom: false,
         cameraControls: true,
+        loading: Loading.eager,
+        withCredentials: true,
       ),
     );
   }

@@ -41,6 +41,9 @@ dependencies:
   introduction_screen: ^3.1.12
   dots_indicator: ^2.1.2
   flutter_svg: ^2.0.9
+  firebase_core: ^2.23.0
+  firebase_auth: ^4.14.1
+  cloud_firestore: ^4.13.2
   
 
 dev_dependencies:
