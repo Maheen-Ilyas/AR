@@ -1,7 +1,8 @@
 import 'package:ar/firebase_options.dart';
-import 'package:ar/screens/carousel.dart';
+// import 'package:ar/screens/carousel.dart';
 import 'package:ar/screens/home_page.dart';
 import 'package:ar/screens/login.dart';
+import 'package:ar/screens/profile_page.dart';
 import 'package:ar/screens/sign_up.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => const Login(),
         '/home': (context) => const HomePage(),
       },
-      home: const Carousel(),
+      home: const ProfilePage(),
     );
   }
 }

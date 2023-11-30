@@ -66,10 +66,10 @@ class _LoginState extends State<Login> {
                   size: 18,
                   color: Theme.of(context).primaryColor,
                 ),
-                hintText: "Email",
                 type: TextInputType.emailAddress,
                 enableSuggestions: true,
                 obscureText: false,
+                labelText: 'Email',
               ),
               const SizedBox(height: 15),
               CustomTextField(
@@ -79,10 +79,10 @@ class _LoginState extends State<Login> {
                   size: 18,
                   color: Theme.of(context).primaryColor,
                 ),
-                hintText: "Password",
                 type: TextInputType.text,
                 enableSuggestions: false,
                 obscureText: true,
+                labelText: 'Password',
               ),
               const SizedBox(height: 15),
               ElevatedButton(
