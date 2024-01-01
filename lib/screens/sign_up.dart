@@ -71,7 +71,8 @@ class _SignUpState extends State<SignUp> {
                 ),
                 type: TextInputType.text,
                 enableSuggestions: true,
-                obscureText: false, labelText: 'Username',
+                obscureText: false,
+                labelText: 'Username',
               ),
               const SizedBox(height: 15),
               CustomTextField(
@@ -83,7 +84,8 @@ class _SignUpState extends State<SignUp> {
                 ),
                 type: TextInputType.emailAddress,
                 enableSuggestions: true,
-                obscureText: false, labelText: 'Email',
+                obscureText: false,
+                labelText: 'Email',
               ),
               const SizedBox(height: 15),
               CustomTextField(
@@ -95,7 +97,8 @@ class _SignUpState extends State<SignUp> {
                 ),
                 type: TextInputType.text,
                 enableSuggestions: false,
-                obscureText: true, labelText: 'Password',
+                obscureText: true,
+                labelText: 'Password',
               ),
               const SizedBox(height: 15),
               ElevatedButton(
@@ -175,6 +178,7 @@ class _SignUpState extends State<SignUp> {
         },
       );
     } on FirebaseAuthException catch (e) {
+      if (!context.mounted) return;
       if (e.code == 'weak-password') {
         errorDialogBox(context, "Weak password");
       } else if (e.code == 'invalid-email') {
@@ -183,6 +187,7 @@ class _SignUpState extends State<SignUp> {
         errorDialogBox(context, "Email already in use");
       }
     } catch (e) {
+      if (!context.mounted) return;
       errorDialogBox(context, e.toString());
     }
   }
