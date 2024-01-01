@@ -1,5 +1,4 @@
 import 'package:ar/firebase_options.dart';
-// import 'package:ar/screens/carousel.dart';
 import 'package:ar/screens/home_page.dart';
 import 'package:ar/screens/login.dart';
 import 'package:ar/screens/profile_page.dart';
